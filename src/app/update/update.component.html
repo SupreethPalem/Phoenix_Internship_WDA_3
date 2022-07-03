@@ -1,0 +1,89 @@
+<div>
+    <div class="card">
+    <div class="card-header">
+        
+        <!-- <h2 class="text-center"> Sign In Form </h2> -->
+    </div>
+    <div class="card-body">
+          
+        
+        
+        
+        
+        <form [formGroup]="myForm" #formData=ngForm>
+            <body>
+                <div class="container">
+                    <h2 class="text-center"> Registrstion Form </h2>
+            <div  >
+                <div class="input-box">
+                <label for="staticEmail">Email</label>
+                
+        
+                    <input type="text" class="form-control" formControlName="Email" id="staticEmail" value="">
+                </div>
+            </div>
+      
+           <div>
+                <label for="inputPassword">Password</label>
+                
+                   <input type="password" class="form-control" formControlName="Password" id="inputpassword">
+                    </div> 
+                
+
+                    <div >
+                       
+                            <label  >FirstName</label>
+                
+                    <input type="text" formControlName="FirstName" class="form-control">
+                        </div>
+                        
+        
+                        
+                        <div >
+                            <label  >MiddleName</label>
+                
+                    <input type="text" formControlName="MiddleName" class="form-control">
+                        </div> 
+                         
+
+                        
+                        <div >
+                            <label  >LastName</label>
+                
+                    <input type="text"  formControlName="LastName" class="form-control">
+                        </div> 
+                       
+
+
+
+                    <div >
+                        
+                        <mat-form-field appearance="fill">
+                           <label >Dob</label>
+                            <input matInput formControlName="Dob" [matDatepicker]="picker">
+                            
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                          </mat-form-field>
+                        </div>
+                        <div >
+                            <mat-radio-group formControlName="Gender" aria-label="Select an option">
+                                <mat-radio-button value="M">Male</mat-radio-button>
+                                <mat-radio-button value="F">Female</mat-radio-button>
+                              </mat-radio-group>
+                               </div>
+                   
+                
+                     <div >
+                        <button type="button" [disabled]="!formData.valid" (click)="Update()" class="btn btn-warning">Update Date</button>
+                     </div>
+                    </div>
+                    </body>
+                   
+  
+   
+
+            
+            
+            
+
